@@ -1,11 +1,10 @@
 //https://www.codewars.com/kata/54b724efac3d5402db00065e
 
 decodeMorse = function(morseCode){
-  let words = morseCode.trim().split("   ");
-  words.forEach((word, i, wordArr) => {
-    wordArr[i] = word.split(" ")
+  return morseCode.trim()
+    .split("   ")
+    .map(word => word.split(" ")
       .map(letter => MORSE_CODE[letter])
-      .join("");
-  });
-  return words.join(" ");
+      .join(""))
+    .join(" ");
 }
