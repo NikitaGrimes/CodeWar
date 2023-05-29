@@ -2,7 +2,7 @@
 
 decodeMorse = function(morseCode){
   let words = morseCode.trim().split("   ");
-  words.map((word, i, wordArr) => {
+  words.forEach((word, i, wordArr) => {
     wordArr[i] = word.split(" ")
       .map(letter => MORSE_CODE[letter])
       .join("");
